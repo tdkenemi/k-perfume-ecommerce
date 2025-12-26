@@ -1,0 +1,119 @@
+/* src/App.css (Đã cập nhật sticky header) */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* === 1. THÊM KHỐI NÀY ĐỂ GIỮ HEADER === */
+.sticky-header {
+    position: sticky; /* Bám dính */
+    top: 0;           /* Ở vị trí 0px từ trên cùng */
+    width: 100%;
+    z-index: 1030;    /* Phải cao hơn mọi thứ khác (vd: sidebar admin) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ nhẹ */
+}
+
+/* === 2. THAY ĐỔI KHỐI NÀY (XÓA Z-INDEX) === */
+/* === THANH TRÊN (TOP BAR) - NỀN XANH === */
+#top-bar {
+  background-color: #0f4c3b !important;
+  /* Đã xóa 'position: relative' và 'z-index: 1021' */
+  /* Vì '.sticky-header' bên trên đã xử lý z-index */
+}
+
+/* Tên shop (brand) ở thanh trên */
+#top-bar .navbar-brand-custom {
+  font-weight: 700 !important;
+  font-size: 1.8rem !important; 
+  color: #ffffff !important;
+}
+#top-bar .navbar-brand-custom:hover {
+  color: #f0f0f0 !important;
+}
+
+/* Các link (Đăng nhập, Giỏ hàng) ở thanh trên */
+#top-bar .nav-link,
+#top-bar #username-topbar,
+#top-bar #adminmenu-topbar {
+  color: #a7c2b9 !important; 
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+#top-bar .nav-link:hover,
+#top-bar #username-topbar:hover,
+#top-bar #adminmenu-topbar:hover {
+  color: #ffffff !important; 
+}
+
+
+/* === 3. THANH DƯỚI (MAIN NAV) - NỀN TRẮNG === */
+#main-nav {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e9e9e9;
+  /* Thanh này không còn 'sticky' nữa, nên không cần z-index */
+}
+
+/* Các link điều hướng (Trang chủ, Giới thiệu...) ở thanh dưới */
+#main-nav .nav-link,
+#main-nav #brandmenu-main,
+#main-nav #gendermenu-main {
+  color: #333333 !important;
+  font-weight: 600; 
+  text-transform: uppercase; 
+  font-size: 0.9rem;
+  margin: 0 0.75rem; 
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hiệu ứng Hover cho link thanh dưới */
+#main-nav .nav-link:hover,
+#main-nav #brandmenu-main:hover,
+#main-nav #gendermenu-main:hover {
+  color: #0f4c3b !important; 
+}
+
+/* Đánh dấu link đang active (trang hiện tại) */
+#main-nav .nav-link.active,
+#main-nav .nav-link:focus {
+  color: #0f4c3b !important;
+  border-bottom: 2px solid #0f4c3b; 
+}
+
+
+/* === 4. CSS CHO FOOTER (Vẫn giữ nguyên từ trước) === */
+.footer-link {
+    color: #a7c2b9 !important;
+    padding: 0.2rem 0 !important;
+    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out;
+}
+.footer-link:hover {
+    color: #ffffff !important;
+    text-decoration: none;
+    transform: translateX(3px);
+}
+.social-icon {
+    color: #a7c2b9;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+.social-icon:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+/* Thêm vào src/App.css */
+
+.breadcrumb-item a {
+    color: #333; /* Màu chữ breadcrumb */
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #165c3e; /* Màu xanh thương hiệu khi đang chọn */
+}
+
+/* Hiệu ứng hover cho nút Gửi tin nhắn */
+button[type="submit"]:hover {
+    opacity: 0.9;
+    background-color: #124a32 !important; /* Xanh đậm hơn khi di chuột */
+}

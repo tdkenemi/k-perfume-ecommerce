@@ -1,0 +1,47 @@
+/* src/components/AdminLayout.css */
+
+/* Bọc toàn bộ trang admin */
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f7f6; /* Màu nền xám nhạt cho phần nội dung */
+}
+
+/* Thanh Sidebar */
+.admin-sidebar {
+    width: 260px; /* Độ rộng của sidebar */
+    min-width: 260px;
+    background-color: #0f4c3b; /* Nền xanh rêu (giống theme) */
+    color: white;
+    position: fixed; /* Cố định sidebar */
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto; /* Cho phép cuộn nếu menu dài */
+    z-index: 100;
+}
+
+/* Nội dung chính */
+.admin-content {
+    flex-grow: 1; /* Chiếm hết phần còn lại */
+    margin-left: 260px; /* Chừa chỗ cho sidebar cố định */
+    padding: 20px;
+}
+
+/* Tùy chỉnh link trong sidebar */
+.admin-nav-link {
+    color: #a7c2b9 !important; /* Màu chữ nhạt */
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.admin-nav-link:hover {
+    color: #ffffff !important; /* Sáng lên khi hover */
+    background-color: #0a3629; /* Nền đậm hơn khi hover */
+}
+
+/* CSS cho link đang active (nếu bạn dùng NavLink, nhưng LinkContainer cũng OK) */
+.admin-nav-link.active {
+    color: #ffffff !important;
+    font-weight: bold;
+}

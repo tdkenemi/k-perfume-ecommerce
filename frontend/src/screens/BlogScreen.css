@@ -1,0 +1,121 @@
+/* src/screens/BlogScreen.css */
+
+/* === CHUNG === */
+.blog-container {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #0f4c3b !important; /* Màu xanh thương hiệu */
+}
+
+/* === SIDEBAR (BÊN TRÁI) === */
+.blog-sidebar-title {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    background-color: #f8f9fa; /* Nền xám nhẹ cho tiêu đề sidebar */
+    padding: 10px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding-left: 0;
+    font-size: 14px;
+}
+
+.sidebar-menu li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.sidebar-menu li:last-child {
+    border-bottom: none;
+}
+
+/* Mục Nổi Bật (Sidebar) */
+.featured-item {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.featured-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.featured-title {
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* === MAIN CONTENT (BÊN PHẢI) === */
+.blog-main-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Từng bài viết (Dạng danh sách ngang) */
+.blog-item {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 20px;
+}
+
+.blog-item-img-container {
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.blog-item-img {
+    width: 100%;
+    height: 200px; /* Chiều cao cố định */
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-item:hover .blog-item-img {
+    transform: scale(1.05); /* Zoom nhẹ khi hover */
+}
+
+.blog-item-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.blog-meta {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.blog-excerpt {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
