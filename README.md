@@ -61,8 +61,8 @@ npm install
 Tạo một file tên là `.env` nằm trong thư mục **backend** và điền thông tin:
 ```env
 PORT = 5000
-MONGO_URI=mongodb+srv://tdk:khang0301@cluster0.5uvybew.mongodb.net/perfumeShop?appName=Cluster0
-JWT_SECRET=toiladangkylamwebbanhang12345
+MONGO_URI = đường_dẫn_mongodb_của_bạn
+JWT_SECRET = mã_bí_mật_của_bạn
 ```
 
 ### 4. Khởi chạy dự án (Run Project)
